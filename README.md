@@ -18,7 +18,7 @@ Topology-aware **E(3)-equivariant** neural network for physically consistent pie
 ## Architecture Overview
 
 <p align="center">
-  <img src="assets/model.pdf" width="85%" />
+  <img src="assets/model.png" width="85%" />
 </p>
 
 **TopoTENet** combines SLICES edge labels and space-group information with radial basis functions, spherical harmonics, and node features. The interaction block fuses topology with geometry through:
