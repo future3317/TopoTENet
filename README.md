@@ -155,7 +155,7 @@ TopoTENet selectively emphasizes specific periodic-topological contexts. Mixed b
 ## Acknowledgements
 
 - **SLICES** — This repository includes the `SLICES-3.1.0` package for encoding periodic crystal topology. The original SLICES code is available at [https://github.com/xiaohang007/SLICES.git](https://github.com/xiaohang007/SLICES.git).
-  - Xiao, H. et al. *SLICES: Sliced invariant canonical encoding for crystal structures.* (2023)
+  - Xiao, H., Li, R., Shi, X., Chen, Y., Zhu, L., Chen, X., & Wang, L. (2023). An invertible, invariant crystal representation for inverse design of solid-state materials using generative deep learning. Nature Communications, 14(1), 7027.
 - Crystal structures and piezoelectric tensor data were obtained from the [Materials Project](https://materialsproject.org/).
 
 ---
