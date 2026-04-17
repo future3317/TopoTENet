@@ -1,2 +1,0 @@
-docker run -it -h workq --shm-size=0.5gb -p 7860:7860  --gpus all -v C:\Users\admin\Desktop\xtb_test\SLICES-main:/crystal -w /crystal xiaohang07/slices:v10 /crystal/entrypoint_set_cpus_gradio.sh
-docker run  -it -h workq --shm-size=0.1gb  -v /media/xxx007/新加卷/SLICES2:/crystal -w /crystal vasp:amd_slim /crystal/entrypoint_set_cpus.sh

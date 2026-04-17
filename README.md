@@ -41,7 +41,6 @@ TopoTENet/
 ├── utils.py                      # Helper functions for data loading and preprocessing
 ├── network_classes.py            # Auxiliary network modules
 ├── generate_sllices_from_dataset.py  # Generate SLICES representations from crystal dataset
-├── SLICES-3.1.0/                 # SLICES package (see Acknowledgements)
 ├── assets/                       # Figures and visualizations
 │   ├── model.pdf
 │   ├── nature_level_performance.png
@@ -59,6 +58,16 @@ TopoTENet/
 git clone https://github.com/future3317/TopoTENet.git
 cd TopoTENet
 pip install -r requirements.txt
+```
+
+### Install SLICES
+
+TopoTENet depends on the [SLICES](https://github.com/xiaohang007/SLICES.git) package for periodic-topology encoding. Please install it separately:
+
+```bash
+git clone https://github.com/xiaohang007/SLICES.git
+cd SLICES/SLICES-3.1.0
+pip install -e .
 ```
 
 ### Core Dependencies

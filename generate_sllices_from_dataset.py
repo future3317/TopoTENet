@@ -26,16 +26,36 @@ os.environ["CUDA_VISIBLE_DEVICES"] = ""
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 os.environ["PYTHONWARNINGS"] = "ignore"
 
-# Add SLICES to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'SLICES-3.1.0', 'SLICES-3.1.0', 'src'))
-
+# Try importing SLICES from installed package first, then fallback to local copy
 try:
     from slices.core import SLICES
+except ImportError:
+    local_slices_path = os.path.join(os.path.dirname(__file__), 'SLICES-3.1.0', 'SLICES-3.1.0', 'src')
+    if os.path.isdir(local_slices_path):
+        sys.path.insert(0, local_slices_path)
+        try:
+            from slices.core import SLICES
+        except ImportError:
+            print("Error: SLICES is not installed and local copy not found.")
+            print("Please install SLICES from https://github.com/xiaohang007/SLICES.git")
+            print("  git clone https://github.com/xiaohang007/SLICES.git")
+            print("  cd SLICES/SLICES-3.1.0")
+            print("  pip install -e .")
+            sys.exit(1)
+    else:
+        print("Error: SLICES is not installed.")
+        print("Please install SLICES from https://github.com/xiaohang007/SLICES.git")
+        print("  git clone https://github.com/xiaohang007/SLICES.git")
+        print("  cd SLICES/SLICES-3.1.0")
+        print("  pip install -e .")
+        sys.exit(1)
+
+try:
     from pymatgen.core.structure import Structure
     from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
 except ImportError as e:
     print(f"Error importing required modules: {e}")
-    print("Please ensure pymatgen and SLICES are properly installed")
+    print("Please ensure pymatgen is properly installed")
     sys.exit(1)
 
 
