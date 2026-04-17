@@ -152,21 +152,6 @@ TopoTENet selectively emphasizes specific periodic-topological contexts. Mixed b
 
 ---
 
-## Citation
-
-If you use TopoTENet in your research, please cite our work:
-
-```bibtex
-@article{liu2026topotenef,
-  title={Topology-aware E(3)-equivariant learning for physically consistent piezoelectric tensor prediction},
-  author={Liu, Ruihan and Yu, Jianbo and Ji, Yu and Ruan, Hang and Yang, Xiaofeng},
-  journal={npj Computational Materials},
-  year={2026}
-}
-```
-
----
-
 ## Acknowledgements
 
 - **SLICES** — This repository includes the `SLICES-3.1.0` package for encoding periodic crystal topology. The original SLICES code is available at [https://github.com/xiaohang007/SLICES.git](https://github.com/xiaohang007/SLICES.git).
